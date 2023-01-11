@@ -118,8 +118,22 @@ public class TechJobs {
     }
 
     // Print a list of jobs
+    /* Should look like:
+        *****
+        position type: Other
+        name: QA Analyst
+        employer: Bandcamp
+        location: New York
+        core competency: Ruby, Javascript
+        *****
+     */
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-
-        System.out.println("printJobs is not implemented yet");
+        for (HashMap<String, String> jobinfo : someJobs) {
+            for(Map.Entry<String, String> job : jobinfo.entrySet()){
+                String jobkey = job.getKey();
+                String jobvalue = job.getValue();
+                System.out.println(jobkey+": "+jobvalue);
+            }
+        }
     }
 }
