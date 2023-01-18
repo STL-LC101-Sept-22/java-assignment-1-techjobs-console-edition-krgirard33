@@ -118,26 +118,17 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    /* Should look like:
-        *****
-        position type: Other
-        name: QA Analyst
-        employer: Bandcamp
-        location: New York
-        core competency: Ruby, Javascript
-        *****
-     */
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (!someJobs.isEmpty()) {
             for (HashMap<String, String> jobinfo : someJobs) {
 
-                System.out.println("*****");
+                System.out.println("\n*****");
                 for (Map.Entry<String, String> job : jobinfo.entrySet()) {
                     String jobkey = job.getKey();
                     String jobvalue = job.getValue();
                     System.out.println(jobkey + ": " + jobvalue);
                 }
-                System.out.println("*****\n");
+                System.out.println("*****");
             }
         } else {
             System.out.println("No Results");
