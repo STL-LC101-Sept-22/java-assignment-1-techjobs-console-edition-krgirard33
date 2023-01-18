@@ -79,19 +79,17 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
         }
-
         return jobs;
     }
 
     /**
      * Search all columns for the given term
-     *
+     * change value & aValue to lower case for case-insensitive
      * @param value The search term to look for
-     *              change value & aValue to lower case for case-insensitive
      * @return      List of all jobs with at least one field containing the value
      */
     public static ArrayList<HashMap<String, String>> findByValue(String value) {
